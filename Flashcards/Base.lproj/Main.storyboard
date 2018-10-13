@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xjv-YT-ddi">
-                                <rect key="frame" x="46" y="263" width="282" height="139"/>
+                                <rect key="frame" x="46" y="123" width="282" height="139"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seven" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbr-fQ-wPc" userLabel="Back label">
@@ -44,12 +44,46 @@
                                     <outletCollection property="gestureRecognizers" destination="aYl-9o-pEn" appends="YES" id="bv3-LQ-s7e"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNP-ge-JBY">
+                                <rect key="frame" x="157" y="358" width="67" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Four">
+                                    <color key="titleColor" red="0.34901960784313724" green="0.792156862745098" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapOptionOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cGz-LA-FlD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3z-NY-mZh">
+                                <rect key="frame" x="154" y="438" width="73" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Seven">
+                                    <color key="titleColor" red="0.23879435039999999" green="0.79224235860000003" blue="0.86562904789999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapOptionTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pa9-MM-swf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MO4-zJ-Eb4">
+                                <rect key="frame" x="159" y="535" width="63" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Ten">
+                                    <color key="titleColor" red="0.23879435039999999" green="0.79224235860000003" blue="0.86562904789999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapOptionThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HrW-16-7Y8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="backLabel" destination="qbr-fQ-wPc" id="0WO-gt-r8v"/>
+                        <outlet property="btnOptionOne" destination="vNP-ge-JBY" id="qMt-XD-v8i"/>
+                        <outlet property="btnOptionThree" destination="MO4-zJ-Eb4" id="ln3-9I-07a"/>
+                        <outlet property="btnOptionTwo" destination="f3z-NY-mZh" id="Jla-ov-86p"/>
+                        <outlet property="card" destination="Xjv-YT-ddi" id="Eky-1u-h4w"/>
                         <outlet property="frontLabel" destination="JLR-ef-3RD" id="4NF-M0-Ei9"/>
                     </connections>
                 </viewController>
