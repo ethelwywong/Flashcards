@@ -6,8 +6,6 @@ Allows users to use electronics flashcards to study.  Shows questions and user t
 ### App Walk-though
 <img src="http://g.recordit.co/Gn1ywV4DH7.gif" width=200><br>
 
-`TODO://` In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. (☝️ Remove this paragraph after after checking off user stories)
-
 ## Required
 - [X] Create New Project in Xcode
 - [X] Add a view for the front side of the flashcard to display the question
