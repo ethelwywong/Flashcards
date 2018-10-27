@@ -41,6 +41,15 @@ class ViewController: UIViewController {
         
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        
+        let navigationController = segue.destination as! UINavigationController
+        
+        let creationController = navigationController.topViewController as! CreationViewController
+        
+        creationController.flashcardsController = self
+    }
 
     @IBAction func didTapOnFlashcard(_ sender: Any) {
         if frontLabel.isHidden//if answer is already shown
@@ -51,6 +60,11 @@ class ViewController: UIViewController {
         {
             frontLabel.isHidden = true//show answer
         }
+    }
+    
+    func updateFlashcard(question: String, answer: String){
+        frontLabel.text = question
+        backLabel.text = answer
     }
     
     @IBAction func didTapOptionOne(_ sender: Any) {
