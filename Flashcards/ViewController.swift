@@ -65,6 +65,7 @@ class ViewController: UIViewController {
     func updateFlashcard(question: String, answer: String){
         frontLabel.text = question
         backLabel.text = answer
+        
     }
     
     @IBAction func didTapOptionOne(_ sender: Any) {
