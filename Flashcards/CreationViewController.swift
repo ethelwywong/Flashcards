@@ -14,8 +14,20 @@ class CreationViewController: UIViewController {
     @IBOutlet weak var questionTextField: UITextField!
     @IBOutlet weak var answerTextField: UITextField!
     
+    @IBOutlet weak var extraAnswerTwoTextField: UITextField!
+    @IBOutlet weak var extraAnswerOneTextField: UITextField!
+    
+    var initialQuestion: String?
+    var initialAnswer: String?
+    //var initialExtraAnswerOne: String?
+    //var initialExtraAnswerTwo: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        questionTextField.text = initialQuestion
+        answerTextField.text = initialAnswer
+        //extraAnswerOneTextField.text = initialExtraAnswerOne
+        //extraAnswerTwoTextField.text = initialExtraAnswerTwo
 
         // Do any additional setup after loading the view.
     }
@@ -28,9 +40,20 @@ class CreationViewController: UIViewController {
         
         let answerText = answerTextField.text
         
-        flashcardsController.updateFlashcard(question: questionText!, answer: answerText!)
+        let extraAnswerOneText = extraAnswerOneTextField.text
         
-        dismiss(animated: true)
+        let extraAnswerTwoText = extraAnswerTwoTextField.text
+        
+        if (questionText == nil || answerText == nil || questionText!.isEmpty || answerText!.isEmpty){
+            let alert = UIAlertController(title: "Missing String", message: "You need to enter a question or answer", preferredStyle: UIAlertController.Style .alert)
+            present(alert, animated: true)
+            let okAction = UIAlertAction(title: "Ok", style: .default)
+            alert.addAction(okAction)
+        }
+        else {
+            flashcardsController.updateFlashcard(question: questionText!, answer: answerText!, extraAnswerOne: extraAnswerOneText, extraAnswerTwo: extraAnswerTwoText)
+            dismiss(animated: true)
+        }
     }
     
     /*

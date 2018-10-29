@@ -37,6 +37,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukp-7g-euE">
+                                        <rect key="frame" x="244" y="109" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="✏️"/>
+                                        <connections>
+                                            <segue destination="YkJ-S8-oDg" kind="show" identifier="EditSegue" id="54I-lo-Kmf"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
@@ -130,6 +138,20 @@
                                     <outletCollection property="gestureRecognizers" destination="sMp-QL-WZv" appends="YES" id="LkX-6M-5u6"/>
                                 </connections>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Extra Answer One" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2lY-et-b9g">
+                                <rect key="frame" x="139" y="325" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Extra Answer Two" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XRA-gD-F63">
+                                <rect key="frame" x="139" y="376" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -153,6 +175,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="answerTextField" destination="B4j-Kp-VAE" id="yUO-5X-MGn"/>
+                        <outlet property="extraAnswerOneTextField" destination="2lY-et-b9g" id="Kzo-Gc-KEB"/>
+                        <outlet property="extraAnswerTwoTextField" destination="XRA-gD-F63" id="trm-Ix-peA"/>
                         <outlet property="questionTextField" destination="2xM-QU-6F5" id="2VO-Pl-ekQ"/>
                     </connections>
                 </viewController>
@@ -184,4 +208,7 @@
             <point key="canvasLocation" x="837.60000000000002" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="54I-lo-Kmf"/>
+    </inferredMetricsTieBreakers>
 </document>
