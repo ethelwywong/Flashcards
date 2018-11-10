@@ -161,6 +161,7 @@ class ViewController: UIViewController {
             let savedCards = dictionaryArray.map {dictionary -> Flashcard in
                 return Flashcard(question: dictionary["question"]!, answer: dictionary["answer"]!, extraAnswerOne: dictionary["extraAnswerOne"]!, extraAnswerTwo: dictionary["extraAnswerTwo"]!)
             }
+            
             flashcards.append(contentsOf: savedCards)
         }
     }
